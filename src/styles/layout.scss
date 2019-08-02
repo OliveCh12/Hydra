@@ -1,0 +1,8 @@
+body {
+    display: flex;
+    flex-direction: center;
+    min-height: 100vh;
+}
+.wrapper {
+    flex-grow: 1;
+}

@@ -1,0 +1,24 @@
+// Override default variables before the import
+@import url('https://fonts.googleapis.com/css?family=Barlow|Noto+Sans+JP&display=swap');
+
+$primary : rgb(42, 90, 221);
+
+
+$font-stack: Barlow,
+sans-serif;
+$primary-color: #333;
+
+body {
+    font-family: 'Barlow', sans-serif !important;
+    color: $primary-color;
+}
+
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';
+@import "./components/header.scss";
+@import "./components/footer.scss";
+@import "./components/loader.scss";
+
+
+
+$body-bg: $light;
