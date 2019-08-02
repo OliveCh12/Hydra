@@ -3,30 +3,46 @@ import PropTypes from "prop-types"
 import React from "react"
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
+  <header>
+    <nav className="navbar navbar-expand-lg navbar-dark">
+      <div className="container">
+        <Link className="navbar-brand" to="/">
           {siteTitle}
         </Link>
-      </h1>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="/navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div className="navbar-nav ml-auto">
+            <Link className="nav-item nav-link" to="/projects">
+              Projects
+            </Link>
+            <Link className="nav-item nav-link" to="/pricing">
+              Pricing
+            </Link>
+            <Link className="nav-item nav-link" to="/contact">
+              Contact
+            </Link>
+            <Link className="nav-item nav-link" to="/about">
+              About
+            </Link>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div className="hero">
+      <div className="hero-content">
+        <h1>次の大きい事</h1>
+        <p>Front-End Developper</p>
+      </div>
     </div>
   </header>
 )
