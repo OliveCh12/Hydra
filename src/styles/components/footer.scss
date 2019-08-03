@@ -1,9 +1,22 @@
 .footer-top {
     background-color: $primary;
     color: $white;
-    height: 3rem;
+    min-height: 5rem;
 
     h5 {
         font-size: 12pt;
+    }
+
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+
+    p{
+        font-size: 10pt;
+        margin: 0;
     }
 }

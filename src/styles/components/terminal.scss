@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu+Mono&display=swap");
+
+// Change the color here
+// $primary: #ff0b55;
+$secondary: darkgray;
+
+.terminal {
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid rgba(black, 0.1);
+    box-shadow: $box-shadow-glow;
+    height: 100%;
+    transition: 0.1s;
+
+    .terminal-header {
+        font-family: "Open Sans", sans-serif;
+        font-weight: lighter;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 8pt;
+        padding: 10px;
+        color: rgba(black, 0.5);
+    }
+
+    .terminal-dots {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .terminal-dot:first-child {
+        background-color: $primary;
+    }
+
+    .terminal-dot {
+        border-radius: 100px;
+        height: 12px;
+        width: 12px;
+        margin-right: 10px;
+        background-color: $secondary;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+    .terminal-dot:hover {
+        transform: scale(1.2);
+    }
+
+    .terminal-content {
+        padding: 20px;
+        line-height: 25px;
+    }
+
+    code {
+        font-family: "Ubuntu Mono";
+        font-size: 12pt;
+        margin: 0;
+    }
+
+    pre {
+        margin: 0;
+        overflow: hidden;
+        white-space: pre-wrap;
+    }
+
+    code::before {
+        content: "$";
+        font-family: "Ubuntu Mono";
+        color: $primary;
+        font-weight: bolder;
+        margin-right: 10px;
+    }
+
+    code::after {
+        content: "";
+        padding: 0px 5px 0px 5px;
+        margin: 5px;
+        background: $primary;
+        animation: blink 1s linear infinite;
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.terminal:active {
+    transform: scale(0.99);
+    box-shadow: 0px 0px 0px $primary;
+}
+
+::selection {
+    background-color: $primary;
+    color: white;
+}
