@@ -2,6 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
+
 const Header = ({ siteTitle }) => (
   <header>
     <nav className="navbar navbar-expand-lg navbar-dark">
@@ -33,6 +34,9 @@ const Header = ({ siteTitle }) => (
             </Link>
             <Link className="nav-item nav-link" to="/about">
               About
+            </Link>
+            <Link className="nav-item nav-link" to="/about">
+              Jobs<span class="badge badge-light ml-2">5</span>
             </Link>
           </div>
         </div>

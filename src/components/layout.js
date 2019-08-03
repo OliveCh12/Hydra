@@ -11,8 +11,9 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Footer from "./footer"
-import "./layout.css"
 import "../styles/main.scss"
+
+import Divider from "../images/divider.svg"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -28,7 +29,13 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div className="container mt-5 mb-5">
+      <svg>
+        <path
+          d=" M 0 0 L 0 122.137 Q 423.152 259.863 629 122.137 Q 834.849 -15.588 1280 122.137 L 1280 0 L 0 0 Z "
+          className="divider"
+        />
+      </svg>
+      <div className="container mt-5 mb-5 flex-grow-1">
         <main>{children}</main>
       </div>
       <Footer />
