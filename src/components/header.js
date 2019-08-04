@@ -2,8 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle, siteSubtitle }) => (
   <header>
     <nav className="navbar navbar-expand-lg navbar-dark">
       <div className="container">
@@ -35,8 +34,8 @@ const Header = ({ siteTitle }) => (
             <Link className="nav-item nav-link" to="/about">
               About
             </Link>
-            <Link className="nav-item nav-link" to="/about">
-              Jobs<span class="badge badge-light ml-2">5</span>
+            <Link className="nav-item nav-link" to="/jobs">
+              Jobs<span className="badge badge-light ml-2">5</span>
             </Link>
           </div>
         </div>
@@ -45,7 +44,7 @@ const Header = ({ siteTitle }) => (
     <div className="hero">
       <div className="hero-content">
         <h1>次の大きい事</h1>
-        <p>Front-End Developper</p>
+        <p>[ {siteSubtitle.split(" ")} ]</p>
       </div>
     </div>
   </header>
@@ -53,10 +52,12 @@ const Header = ({ siteTitle }) => (
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
+  siteSubtitle: PropTypes.string,
 }
 
 Header.defaultProps = {
   siteTitle: ``,
+  siteSubtitle: "Cool",
 }
 
 export default Header
