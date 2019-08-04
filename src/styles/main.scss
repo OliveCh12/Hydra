@@ -1,18 +1,24 @@
 // Override default variables before the import
-@import url('https://fonts.googleapis.com/css?family=Barlow|Noto+Sans+JP&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP|Barlow&display=swap');
 
-$primary : rgb(38, 30, 54);
+@import "./modules/colors";
 
 $box-shadow-flat: 0px 10px 0px rgba($color: $primary, $alpha: 0.5);
-$box-shadow-glow: 0px 10px 10px rgba($color: $primary, $alpha: 0.2);
+$box-shadow-glow: 0px 10px 10px rgba($color: $primary, $alpha: 0.3);
+@import "./components/header.scss";
+@import "./components/sections";
 
-$font-stack: Barlow,
-sans-serif;
-$primary-color: #333;
+@import "./components/footer.scss";
+@import "./components/loader.scss";
+@import "./components/terminal.scss";
+
+
+
+
 
 body {
-    font-family: 'San Francisco Text' !important;
-    color: $primary-color;
+    font-family: 'Barlow', sans-serif !important;
+
 }
 
 h2 {
@@ -25,7 +31,7 @@ strong {
     color: $primary;
 }
 
-#gatsby-focus-wrapper{
+#gatsby-focus-wrapper {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -33,12 +39,3 @@ strong {
 
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';
-@import "./components/header.scss";
-@import "./components/footer.scss";
-@import "./components/loader.scss";
-@import "./components/terminal.scss";
-
-
-
-
-$body-bg: $light;
