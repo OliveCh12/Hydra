@@ -8,6 +8,14 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `tq74ve6sdyfg`,
+        accessToken: `vj5vU-4lKHfddDZdo93BBpNIgooeT8_0aWFo6e4AuMM`,
+        host: `preview.contentful.com`,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
