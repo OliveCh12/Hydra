@@ -14,11 +14,14 @@ import Footer from "./footer"
 import "../styles/main.scss"
 
 const Layout = ({ children }) => {
+
+  // Get the Data from GraphQL
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
-          title
+          title,
+          author
         }
       }
     }
@@ -30,7 +33,7 @@ const Layout = ({ children }) => {
       <div className="flex-grow-1">
         <main>{children}</main>
       </div>
-      <Footer />
+      <Footer siteAuthor={data.site.siteMetadata.author}/>
     </>
   )
 }

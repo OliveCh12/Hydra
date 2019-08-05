@@ -1,9 +1,7 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-
 
 // Sections imports 
 import SectionIntro from "../components/index/sectionIntro"
@@ -15,8 +13,6 @@ const IndexPage = () => (
     <SEO title="Home" />
     <SectionIntro />
     <SectionSkills />
-
-
 
     <section className="bg-light">
       <div className="container">
