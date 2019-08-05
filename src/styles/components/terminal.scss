@@ -8,7 +8,7 @@ $secondary: darkgray;
     background-color: #fff;
     border-radius: 5px;
     border: 1px solid rgba(black, 0.1);
-    box-shadow: $box-shadow-glow;
+    box-shadow: $box-shadow-flat;
     height: 100%;
     transition: 0.1s;
 
@@ -53,6 +53,7 @@ $secondary: darkgray;
 
     code {
         font-family: "Ubuntu Mono";
+        font-weight: 600;
         font-size: 12pt;
         margin: 0;
     }

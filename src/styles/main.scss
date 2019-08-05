@@ -4,7 +4,9 @@
 @import "./modules/colors";
 
 $box-shadow-flat: 0px 10px 0px rgba($color: $primary, $alpha: 0.5);
-$box-shadow-glow: 0px 10px 10px rgba($color: $primary, $alpha: 0.3);
+$box-shadow-glow: 10px 30px 0px rgba($color: $primary, $alpha: 0.3);
+@import "./components/forms";
+
 @import "./components/header.scss";
 @import "./components/sections";
 
@@ -22,8 +24,14 @@ body {
 }
 
 h2 {
-    font-weight: 800 !important;
+    font-family: "Rubik";
+    font-weight: bolder !important;
     text-transform: uppercase;
+    transition: 1s;
+}
+
+p {
+    opacity: 0.9;
 }
 
 
