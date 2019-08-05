@@ -1,20 +1,26 @@
+const dotenv = require("dotenv")
+
+if (process.env.NODE_ENV !== "production") {
+  dotenv.config()
+}
+
 module.exports = {
   siteMetadata: {
     title: `Hydra`,
+    subtitle: "Cool",
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    author: `Olivier Chemla`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
-    {
-      resolve: `gatsby-source-contentful`,
-      options: {
-        spaceId: `tq74ve6sdyfg`,
-        accessToken: `vj5vU-4lKHfddDZdo93BBpNIgooeT8_0aWFo6e4AuMM`,
-        host: `preview.contentful.com`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-contentful`,
+    //   options: {
+    //     spaceId: `tq74ve6sdyfg`,
+    //     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+    //   },
+    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
